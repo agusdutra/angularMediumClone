@@ -1,13 +1,13 @@
-import { ModuleWithProviders, NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import {ModuleWithProviders, NgModule} from '@angular/core';
+import {RouterModule} from '@angular/router';
 
-import { ArticleComponent } from './article.component';
-import { ArticleCommentComponent } from './article-comment.component';
-import { ArticleResolver } from './article-resolver.service';
-import { MarkdownPipe } from './markdown.pipe';
-import { SharedModule } from '../shared';
+import {ArticleComponent} from './article.component';
+import {ArticleCommentComponent} from './article-comment.component';
+import {ArticleResolver} from './article-resolver.service';
+import {MarkdownPipe} from './markdown.pipe';
+import {SharedModule} from '../shared';
 
-const articleRouting: ModuleWithProviders = RouterModule.forChild([
+const articleRouting = RouterModule.forChild([
   {
     path: 'article/:slug',
     component: ArticleComponent,
@@ -32,4 +32,5 @@ const articleRouting: ModuleWithProviders = RouterModule.forChild([
     ArticleResolver
   ]
 })
-export class ArticleModule {}
+export class ArticleModule {
+}

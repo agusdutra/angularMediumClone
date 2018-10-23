@@ -1,13 +1,13 @@
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-import { RouterModule } from '@angular/router';
+import {CommonModule} from '@angular/common';
+import {NgModule} from '@angular/core';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {RouterModule} from '@angular/router';
 
-import { ArticleListComponent, ArticleMetaComponent, ArticlePreviewComponent  } from './article-helpers';
-import { FavoriteButtonComponent, FollowButtonComponent } from './buttons';
-import { ListErrorsComponent } from './list-errors.component';
-import { ShowAuthedDirective } from './show-authed.directive';
+import {ArticleListComponent, ArticleMetaComponent, ArticlePreviewComponent} from './article-helpers';
+import {FavoriteButtonComponent, FollowButtonComponent} from './buttons';
+import {ListErrorsComponent} from './list-errors.component';
+import {ShowAuthedDirective} from './show-authed.directive';
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -15,7 +15,7 @@ import { ShowAuthedDirective } from './show-authed.directive';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpModule,
+    HttpClientModule,
     RouterModule
   ],
   declarations: [
@@ -35,11 +35,12 @@ import { ShowAuthedDirective } from './show-authed.directive';
     FollowButtonComponent,
     FormsModule,
     ReactiveFormsModule,
-    HttpModule,
+    HttpClientModule,
     FavoriteButtonComponent,
     ListErrorsComponent,
     RouterModule,
     ShowAuthedDirective
   ]
 })
-export class SharedModule { }
+export class SharedModule {
+}
